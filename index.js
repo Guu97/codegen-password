@@ -3,12 +3,13 @@ const PORT = process.env.PORT || 8000;
 const express = require('express');
 
 const app= express();
-const version = "1.0.1";
+const version = "1.0.2";
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 app.get("/", (req,res) => {
-    res.json("Welcome to codegenAPI - "+version);
+    response= { success: true, message: "Welcome to codegenAPI", version, version};
+    res.status(200).json(response);
 })
 
 /*
