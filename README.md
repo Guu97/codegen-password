@@ -1,5 +1,4 @@
 # codegen-password
-Please move to the master branch, not main
 
 This is a REST Web Service developed with Express.js. 
 
